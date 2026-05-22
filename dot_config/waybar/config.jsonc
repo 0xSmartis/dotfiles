@@ -1,0 +1,82 @@
+{
+    "position": "top",
+    "margin-top": 15,
+    "modules-left": [
+        "clock",
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "tray"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "battery",
+        "custom/notification"
+    ],
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "tooltip-format": "{:%A, %d. %B %Y}"
+    },
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟 muted",
+        "format-icons": {
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+        "on-click": "pavucontrol"
+    },
+    "network": {
+        "interface": "wlan0",
+        "format-wifi": "  {essid}",
+        "format-ethernet": "󰈀  Ethernet",
+        "format-disconnected": "󰤭  Disconnected",
+        "tooltip-format-wifi": "{ifname}: {essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-disconnected": "Disconnected"
+    },
+    "battery": {
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󰚥 {capacity}%",
+        "format-icons": [
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ]
+    },
+    "custom/notification": {
+        "tooltip": false,
+        "format": "󰂚",
+        "on-click": "swaync-client -t",
+        "exec": "swaync-client -swb",
+        "return-type": "json",
+        "escape": true
+    }
+}
