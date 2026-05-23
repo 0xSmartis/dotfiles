@@ -9,6 +9,7 @@
         "tray"
     ],
     "modules-right": [
+        "custom/weather",
         "pulseaudio",
         "network",
         "battery",
@@ -70,6 +71,13 @@
             "󰂂",
             "󰁹"
         ]
+    },
+    "custom/weather": {
+        "exec": "/home/matt/.config/waybar/scripts/weather.sh",
+        "interval": 900,
+        "return-type": "json",
+        "format": "{}",
+        "tooltip": true
     },
     "custom/notification": {
         "tooltip": false,
