@@ -2,21 +2,23 @@
     "position": "top",
     "margin-top": 15,
     "modules-left": [
-        "clock",
-        "hyprland/workspaces"
+      
     ],
     "modules-center": [
-        "tray"
-    ],
-    "modules-right": [
+        "clock",
+        "hyprland/workspaces",
         "custom/weather",
         "pulseaudio",
         "network",
         "battery",
+        "tray",
         "custom/notification"
     ],
+    "modules-right": [
+      
+    ],
     "clock": {
-        "format": "{:%I:%M %p}",
+        "format": "{:%Y-%m-%d %H:%M}",
         "tooltip-format": "{:%A, %d. %B %Y}"
     },
     "hyprland/workspaces": {
